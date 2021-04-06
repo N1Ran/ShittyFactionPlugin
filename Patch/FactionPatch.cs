@@ -12,7 +12,7 @@ using VRage.Network;
 namespace ShittyFactionPlugin.Patch
 {
     [PatchShim]
-    public class FactionPatch
+    public static class FactionPatch
     {
         private static readonly MethodInfo ChangeFactionSuccess =
             typeof(MyFactionCollection).GetMethod("FactionStateChangeSuccess",

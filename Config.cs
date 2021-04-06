@@ -8,6 +8,7 @@ namespace ShittyFactionPlugin
         private bool _assignNewPlayers;
         private int _factionMemberLimit;
         private string _joinDenyMsg = "Faction join request denied";
+        private bool _keepDefaultEnemy;
 
 
         public bool Enable
@@ -47,6 +48,16 @@ namespace ShittyFactionPlugin
             set
             {
                 _joinDenyMsg = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool KeepDefaultEnemy
+        {
+            get => _keepDefaultEnemy;
+            set
+            {
+                _keepDefaultEnemy = value;
                 OnPropertyChanged();
             }
         }
